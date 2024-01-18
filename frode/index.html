@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<hmtl>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Home, sweet home.</title>
+      <link rel="icon" type="image/png" href="images/icon.png">
+      <link id="style" rel="stylesheet" href="css/standard.css">
+      <style>
+         .flex-container {
+            display: flex;
+            flex-flow: column wrap;
+            height: 90vh;
+         }
+      </style>
+   </head>
+   
+   <body>
+      <div class="flex-container">
+         <div style="margin:3px">
+
+            <select id="velgOppskrift" onchange='setFrame2("oppskrift", "velgOppskrift")'>
+               <option hidden selected> -- Velg oppskrift -- </option>
+               
+               <option value="ostekake.html">Ostekake</option>
+               <option value="konfektkake.html">Konfektkake</option>
+               <option value="sitronkjeks.html">Sitron- og pistasjkjeks</option>
+               
+               <option value="empanadas.html">Empanadas</option>
+               <option value="murgh-makhani.html">Murgh Makhani</option>
+               <option value="chili-con-carne.html">Chili Con Carne</option>
+               <option value="løksuppe.html">Løksuppe</option>
+               <option value="tomatsuppe.html">Tomatsuppe</option>
+               
+               <option value="omregning.html">omregning</option>
+            </select>
+            
+            <button id='ostekakeID' onclick='setFrame("oppskrift", "ostekake.html")'>Ostekake</button>
+            <button id='konfektkakeID' onclick='setFrame("oppskrift", "konfektkake.html")'>Konfektkake</button>
+            <button id='sitronkjeksID' onclick='setFrame("oppskrift", "sitronkjeks.html")'>Sitron- og pistasjkjeks</button>
+            
+            <button id='empanadasID' onclick='setFrame("oppskrift", "empanadas.html")'>Empanadas</button>
+            <button id='murghmakhaniID' onclick='setFrame("oppskrift", "murgh-makhani.html")'>Murgh Makhani</button>
+            <button id='chiliID' onclick='setFrame("oppskrift", "chili-con-carne.html")'>Chili Con Carne</button>
+            <button id='onionsuoupID' onclick='setFrame("oppskrift", "løksuppe.html")'>Løksuppe</button>
+            <button id='tomatsuppeID' onclick='setFrame("oppskrift", "tomatsuppe.html")'>Tomatsuppe</button>
+            
+            <button id='omregningID' onclick='setFrame("oppskrift", "omregning.html")'>omregning</button>
+            
+            <hr/>
+         </div>
+         <div style="flex-grow:7; margin:0px">
+            <iframe id="oppskrift" title="Oppskrift"></iframe>
+         </div>
+         <div style="margin:5px">
+            <hr/>
+            20&copy23 Frode Tvedten
+         </div>
+      </div>
+      
+      <script src="js/media.js"></script>
+      <script>setStyle("style")</script>
+      <script>showOnPc("velgOppskrift")</script>
+      <script>showOnMobile("ostekakeID")</script>
+      <script>showOnMobile("konfektkakeID")</script>
+      <script>showOnMobile("sitronkjeksID")</script>
+      <script>showOnMobile("empanadasID")</script>
+      <script>showOnMobile("murghmakhaniID")</script>
+      <script>showOnMobile("chiliID")</script>
+      <script>showOnMobile("onionsuoupID")</script>
+      <script>showOnMobile("tomatsuppeID")</script>
+      <script>showOnMobile("omregningID")</script>
+   </body>
+</html>
